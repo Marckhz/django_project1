@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>crear Evento</title>
+</head>
+<body>
+	<h1>Welcome to Register form</h1>
+
+	<form action="" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="crear Evento">
+	</form>
+</body>
+</html>

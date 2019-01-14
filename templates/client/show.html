@@ -1,0 +1,41 @@
+{% load client_extras %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>show</title>
+</head>
+<body>
+	<h1>Hola Usuario {{ user.username }}</h1>
+
+
+	<p> biografia : {{user.client.bio}}</p>
+	<p>{{ user.username|hola}}</p>
+
+	{% if user.socialnetwork %}		
+		{% for field in user.socialnetwork|list_fields  %}
+			
+			{% with  user.socialnetwork|get_value:field as value %}
+				{% if value %}
+					<p>{{ field }} </p>
+					<p>{{ value }}</p>
+				{% endif %}
+			{% endwith %}
+		{% endfor %}
+	{% endif %}	
+
+
+	{% if user.eventos%}
+		{% for field in user.eventos|list_fields %}
+
+			{% with user.eventos|get_value:field as value %}
+				{% if value %}
+					<p>{{ field }}</p>
+					<p>{{ value }} </p>
+				{% endif %}
+			{% endwith %}
+		{% endfor %}
+	{% endif %}
+</body>
+</html>

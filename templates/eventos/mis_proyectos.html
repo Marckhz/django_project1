@@ -1,0 +1,25 @@
+{{ forms.non_field_erros }}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mis proyectos</title>
+</head>
+<body>
+
+
+	{% block content %}
+		
+		{% for evento in object_list %}
+			<p> {{ evento.title }} </p>
+			<p>  {{evento.description }}</p>
+			<p> {{evento.dead_line }} </p> 
+
+		{% endfor %}
+
+	
+	{% endblock  %}
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <!--- My Css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<style>
+	.con1 a{
+
+		color:red;
+	}
+</style>
+<body>
+
+	<h1 id="hola-dash">Welcome</h1>
+	
+	<div class="container">
+		<a href="{% url 'clients:logout' %}">logout</a>
+		<a href="{% url 'clients:show' user.username %}">show</a>
+		<a href="{% url 'clients:edit' %}">Edit</a>
+		<a href="{% url 'clients:editPassword' %}">Edit Password</a>
+		<a href="{% url 'clients:edit_client' %}">editar mi perfil</a>
+		<a href="{% url 'clients:hola' %}">hola</a>
+		<a href="{% url 'eventos:crear_evento' %}">crear un evento</a>
+		<a href="{% url 'clients:edit_social' %}">editar la red social</a>
+	</div>
+	<div class="container con1">
+		<a href="{% url 'clients:show' user.username %}"> {{user.username }}</a>
+	</div>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

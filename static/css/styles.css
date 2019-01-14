@@ -1,0 +1,36 @@
+
+#hola-dash {
+	background-color: blue;
+	text-align: center;
+}
+
+ #hola_login{
+
+ 	background-color: gray;
+ 	text-align:  center;
+ 	margin: 0 auto;
+ }
+
+ .username_login{ 
+
+	text-align: center;
+	margin: auto;
+	color: blue;
+	border-radius: 50px;
+	background-color: red;
+  	
+  }
+
+.password_login{ 
+
+	border-radius: 8px;
+	border-color: red;
+	background-color: red;
+
+ }
+
+.errorlist  li {
+
+	color : red;
+ }
+
